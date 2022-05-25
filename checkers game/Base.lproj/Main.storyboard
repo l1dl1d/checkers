@@ -49,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Board View Controller-->
         <scene sceneID="xKP-V7-MxV">
             <objects>
-                <viewController id="dTA-yp-1uD" sceneMemberID="viewController">
+                <viewController id="dTA-yp-1uD" customClass="BoardViewController" customModule="checkers_game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uTk-2l-h58">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,72 +68,48 @@
                                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="square0:" destination="Opc-fU-fmM" eventType="touchUpInside" id="GKy-81-OYM"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSr-qa-uKy">
                                                 <rect key="frame" x="24" y="0.0" width="24" height="14"/>
                                                 <color key="backgroundColor" red="0.78370064500000003" green="0.7139586631" blue="0.629727598" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="square1:" destination="Opc-fU-fmM" eventType="touchUpInside" id="20P-A8-vQ3"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZt-5G-R1f">
                                                 <rect key="frame" x="48" y="0.0" width="24" height="14"/>
                                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="square2:" destination="Opc-fU-fmM" eventType="touchUpInside" id="F0i-ya-jgr"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CY5-gc-XNt">
                                                 <rect key="frame" x="72" y="0.0" width="24" height="14"/>
                                                 <color key="backgroundColor" red="0.78370064500000003" green="0.7139586631" blue="0.629727598" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="square3:" destination="Opc-fU-fmM" eventType="touchUpInside" id="f6G-tD-wSE"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvS-p0-knO">
                                                 <rect key="frame" x="96" y="0.0" width="24" height="14"/>
                                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="square4:" destination="Opc-fU-fmM" eventType="touchUpInside" id="OLJ-2Q-Mnz"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06r-aU-8xO">
                                                 <rect key="frame" x="120" y="0.0" width="24" height="14"/>
                                                 <color key="backgroundColor" red="0.78370064500000003" green="0.7139586631" blue="0.629727598" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="square5:" destination="Opc-fU-fmM" eventType="touchUpInside" id="rLl-IJ-ywe"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDo-fN-nC4">
                                                 <rect key="frame" x="144" y="0.0" width="24" height="14"/>
                                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="square6:" destination="Opc-fU-fmM" eventType="touchUpInside" id="fKV-eF-szy"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtI-cH-bUm">
                                                 <rect key="frame" x="168" y="0.0" width="24" height="14"/>
                                                 <color key="backgroundColor" red="0.78370064500000003" green="0.7139586631" blue="0.629727598" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="square7:" destination="Opc-fU-fmM" eventType="touchUpInside" id="2xN-St-XCe"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -145,63 +121,42 @@
                                                 <color key="backgroundColor" red="0.78370064500000003" green="0.7139586631" blue="0.629727598" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="square8:" destination="Opc-fU-fmM" eventType="touchUpInside" id="5bJ-mx-5px"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGB-ss-nHH">
                                                 <rect key="frame" x="24" y="0.0" width="24" height="14"/>
                                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="square9:" destination="Opc-fU-fmM" eventType="touchUpInside" id="66i-dJ-Jpw"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oC1-7c-5Ul">
                                                 <rect key="frame" x="48" y="0.0" width="24" height="14"/>
                                                 <color key="backgroundColor" red="0.78370064500000003" green="0.7139586631" blue="0.629727598" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="square10:" destination="Opc-fU-fmM" eventType="touchUpInside" id="bFt-U6-UUl"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMB-5J-9hS">
                                                 <rect key="frame" x="72" y="0.0" width="24" height="14"/>
                                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="square11:" destination="Opc-fU-fmM" eventType="touchUpInside" id="EyN-tA-pe7"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sF4-AV-d2a">
                                                 <rect key="frame" x="96" y="0.0" width="24" height="14"/>
                                                 <color key="backgroundColor" red="0.78370064500000003" green="0.7139586631" blue="0.629727598" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="square12:" destination="Opc-fU-fmM" eventType="touchUpInside" id="JR7-qV-HpL"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E80-Y6-3we">
                                                 <rect key="frame" x="120" y="0.0" width="24" height="14"/>
                                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="square13:" destination="Opc-fU-fmM" eventType="touchUpInside" id="9PY-mY-XPe"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deK-f2-CYQ">
                                                 <rect key="frame" x="144" y="0.0" width="24" height="14"/>
                                                 <color key="backgroundColor" red="0.78370064500000003" green="0.7139586631" blue="0.629727598" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="square14:" destination="Opc-fU-fmM" eventType="touchUpInside" id="XgE-ID-2ca"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbP-38-OrA">
                                                 <rect key="frame" x="168" y="0.0" width="24" height="14"/>
@@ -403,9 +358,9 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdL-ak-r7a">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPU-gW-rzG">
                                                 <rect key="frame" x="120" y="0.0" width="24" height="14"/>
-                                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                <color key="backgroundColor" red="0.78370064500000003" green="0.7139586631" blue="0.629727598" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                             </button>
@@ -468,9 +423,9 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPU-gW-rzG">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdL-ak-r7a">
                                                 <rect key="frame" x="168" y="0.0" width="24" height="14"/>
-                                                <color key="backgroundColor" red="0.78370064500000003" green="0.7139586631" blue="0.629727598" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" systemColor="systemBrownColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                             </button>
@@ -540,9 +495,71 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Tc2-Qz-F8A"/>
+                    <connections>
+                        <outlet property="square0" destination="d2G-A8-M71" id="I1P-Fx-cU0"/>
+                        <outlet property="square1" destination="SSr-qa-uKy" id="cSK-Ag-gBR"/>
+                        <outlet property="square10" destination="oC1-7c-5Ul" id="BOG-dT-JD0"/>
+                        <outlet property="square11" destination="jMB-5J-9hS" id="bVz-Bw-aK0"/>
+                        <outlet property="square12" destination="sF4-AV-d2a" id="h5z-t9-wmP"/>
+                        <outlet property="square13" destination="E80-Y6-3we" id="MXc-C5-PBY"/>
+                        <outlet property="square14" destination="rbP-38-OrA" id="9vX-gG-SOB"/>
+                        <outlet property="square15" destination="q12-I9-9ah" id="yf5-mB-eES"/>
+                        <outlet property="square16" destination="mRO-oI-jWp" id="q7u-sp-3fP"/>
+                        <outlet property="square17" destination="96U-1t-QFC" id="fo8-tf-SAD"/>
+                        <outlet property="square18" destination="pb3-mm-snM" id="KF4-B8-Qcc"/>
+                        <outlet property="square19" destination="ClT-9d-rPz" id="3sH-Pz-Ynp"/>
+                        <outlet property="square2" destination="GZt-5G-R1f" id="Pus-if-ww4"/>
+                        <outlet property="square20" destination="cSI-UM-xYG" id="H7M-XA-9Oc"/>
+                        <outlet property="square21" destination="5UY-cG-RPN" id="7M1-mO-MT7"/>
+                        <outlet property="square22" destination="2v9-ru-T5q" id="jA4-yO-C4s"/>
+                        <outlet property="square23" destination="XN2-tb-X48" id="J1h-37-339"/>
+                        <outlet property="square24" destination="ur7-Rj-Rth" id="cAX-bt-NPF"/>
+                        <outlet property="square25" destination="h22-Dl-0hj" id="guW-T1-eCG"/>
+                        <outlet property="square26" destination="gTR-IS-AjC" id="AOx-Nm-T7o"/>
+                        <outlet property="square27" destination="AjL-5p-1uO" id="iOE-dE-zTK"/>
+                        <outlet property="square28" destination="gQM-wQ-y3B" id="BLI-w6-g5i"/>
+                        <outlet property="square29" destination="ctm-0H-egP" id="8Ze-ux-Nux"/>
+                        <outlet property="square3" destination="CY5-gc-XNt" id="z8E-bA-JJT"/>
+                        <outlet property="square30" destination="JaJ-Gx-Q5y" id="ye0-Ny-LJM"/>
+                        <outlet property="square31" destination="5q5-ZG-IXv" id="F1E-8N-6Vd"/>
+                        <outlet property="square32" destination="xPF-q0-Mef" id="clP-BH-GTy"/>
+                        <outlet property="square33" destination="2Y8-Ug-LvD" id="A5f-xU-aBx"/>
+                        <outlet property="square34" destination="f8m-n3-kke" id="T5M-vl-ZEq"/>
+                        <outlet property="square35" destination="eXT-GZ-kcg" id="JsY-Kb-YeQ"/>
+                        <outlet property="square36" destination="7ke-x6-iCW" id="0hB-PQ-pLo"/>
+                        <outlet property="square37" destination="pC6-wO-TJK" id="4Q1-rF-uBs"/>
+                        <outlet property="square38" destination="PF7-Br-rft" id="73J-Eg-WeK"/>
+                        <outlet property="square39" destination="1dE-fX-0eq" id="Urk-CW-axu"/>
+                        <outlet property="square4" destination="MvS-p0-knO" id="eRk-tl-dXj"/>
+                        <outlet property="square40" destination="DUa-2w-dqn" id="wU4-31-xce"/>
+                        <outlet property="square41" destination="YlX-ae-OMA" id="JoI-zr-9jg"/>
+                        <outlet property="square42" destination="cga-Fk-alY" id="Ppu-AG-aAg"/>
+                        <outlet property="square43" destination="M2r-V2-Op4" id="lFY-X7-GYp"/>
+                        <outlet property="square44" destination="iPU-gW-rzG" id="xZt-U9-uiN"/>
+                        <outlet property="square45" destination="ne2-MU-XDJ" id="LUE-2y-Emw"/>
+                        <outlet property="square46" destination="0TS-eL-o6M" id="5Xf-Hf-WDW"/>
+                        <outlet property="square47" destination="yq0-eW-OEu" id="QnE-W4-3pc"/>
+                        <outlet property="square48" destination="vxp-QD-VS2" id="DJE-Y5-T9O"/>
+                        <outlet property="square49" destination="mH4-Kf-bfJ" id="o3e-ap-ZKA"/>
+                        <outlet property="square5" destination="06r-aU-8xO" id="xwf-sP-6am"/>
+                        <outlet property="square50" destination="ES3-7O-fg4" id="cQc-AY-2jK"/>
+                        <outlet property="square51" destination="xBk-ir-esx" id="vIW-dZ-Zjq"/>
+                        <outlet property="square52" destination="HPE-Uh-Oma" id="Yrb-jd-yFH"/>
+                        <outlet property="square53" destination="FSP-Bd-DHd" id="fmv-fo-apx"/>
+                        <outlet property="square54" destination="bdL-ak-r7a" id="L2p-wP-vpn"/>
+                        <outlet property="square55" destination="s5P-bc-ypT" id="3kp-xS-G9u"/>
+                        <outlet property="square56" destination="r2a-u1-qoi" id="F28-Fr-pLB"/>
+                        <outlet property="square57" destination="AwB-Na-Qur" id="BbH-4N-9DR"/>
+                        <outlet property="square58" destination="AlC-oi-8OV" id="oXx-r6-1jp"/>
+                        <outlet property="square59" destination="M9F-fi-2Pl" id="IJy-jv-dDe"/>
+                        <outlet property="square6" destination="zDo-fN-nC4" id="6ws-mg-tN2"/>
+                        <outlet property="square60" destination="gIW-3A-FFd" id="c6f-67-DW9"/>
+                        <outlet property="square7" destination="BtI-cH-bUm" id="FJd-6o-Cs0"/>
+                        <outlet property="square8" destination="apn-Y4-r7r" id="MFL-A6-yKw"/>
+                        <outlet property="square9" destination="fGB-ss-nHH" id="0iM-0c-a9p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j4Z-0b-DqN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="Opc-fU-fmM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="764" y="98"/>
         </scene>

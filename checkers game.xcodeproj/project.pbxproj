@@ -16,6 +16,7 @@
 		29200CE82835709F003853FA /* checkers_gameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29200CE72835709F003853FA /* checkers_gameTests.swift */; };
 		29200CF22835709F003853FA /* checkers_gameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29200CF12835709F003853FA /* checkers_gameUITests.swift */; };
 		29200CF42835709F003853FA /* checkers_gameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29200CF32835709F003853FA /* checkers_gameUITestsLaunchTests.swift */; };
+		29A8904F283E77F90067CED9 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A8904E283E77F80067CED9 /* BoardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		29200CED2835709F003853FA /* checkers gameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "checkers gameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29200CF12835709F003853FA /* checkers_gameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkers_gameUITests.swift; sourceTree = "<group>"; };
 		29200CF32835709F003853FA /* checkers_gameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkers_gameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		29A8904E283E77F80067CED9 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				29200CD22835709A003853FA /* SceneDelegate.swift */,
 				29200CD42835709A003853FA /* ViewController.swift */,
 				29200CD62835709A003853FA /* Main.storyboard */,
+				29A8904E283E77F80067CED9 /* BoardViewController.swift */,
 				29200CD92835709E003853FA /* Assets.xcassets */,
 				29200CDB2835709E003853FA /* LaunchScreen.storyboard */,
 				29200CDE2835709E003853FA /* Info.plist */,
@@ -261,6 +264,7 @@
 				29200CD52835709A003853FA /* ViewController.swift in Sources */,
 				29200CD12835709A003853FA /* AppDelegate.swift in Sources */,
 				29200CD32835709A003853FA /* SceneDelegate.swift in Sources */,
+				29A8904F283E77F90067CED9 /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
