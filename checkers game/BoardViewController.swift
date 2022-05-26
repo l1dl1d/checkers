@@ -69,10 +69,21 @@ class BoardViewController: UIViewController {
     @IBOutlet weak var square58: UIButton!
     @IBOutlet weak var square59: UIButton!
     @IBOutlet weak var square60: UIButton!
+    @IBOutlet weak var square61: UIButton!
+    @IBOutlet weak var square62: UIButton!
+    @IBOutlet weak var square63: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    @IBAction func changeImage(_ sender: UIButton) {
+        if sender.currentImage == nil{
+            sender.setImage(UIImage(named: "red"), for: .normal)
+        }
+        else{
+            sender.setImage(nil, for: .normal)
+        }
     }
     
 
