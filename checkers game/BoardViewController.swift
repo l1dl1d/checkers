@@ -79,11 +79,17 @@ class BoardViewController: UIViewController {
     }
     @IBAction func changeImage(_ sender: UIButton) {
         if sender.currentImage == nil{
-            sender.setImage(UIImage(named: "red"), for: .normal)
+            if sender.currentImage == 1 {
+                sender.setImage(UIImage(named: "red"), for: .normal)
+            }
+            else{
+                sender.setImage(UIImage(named: "black"), for: .normal)
+            }
         }
         else{
             sender.setImage(nil, for: .normal)
         }
+        
     }
     
 
