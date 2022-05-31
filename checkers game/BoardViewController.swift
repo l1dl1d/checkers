@@ -72,23 +72,34 @@ class BoardViewController: UIViewController {
     @IBOutlet weak var square61: UIButton!
     @IBOutlet weak var square62: UIButton!
     @IBOutlet weak var square63: UIButton!
+    var justClicked: UIButton?
+    var timesClicked = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     @IBAction func changeImage(_ sender: UIButton) {
-        if sender.currentImage == nil{
-            if sender.currentImage == 1 {
-                sender.setImage(UIImage(named: "red"), for: .normal)
-            }
-            else{
-                sender.setImage(UIImage(named: "black"), for: .normal)
-            }
+        timesClicked = timesClicked + 1
+        justClicked = sender
+        if sender.tag == 1{
+            
         }
-        else{
-            sender.setImage(nil, for: .normal)
-        }
+//        if sender.currentImage == nil{
+//            if sender.tag == 1 {
+//                sender.setImage(UIImage(named: "red"), for: .normal)
+//            }
+//            else if sender.tag == 0{
+//                sender.setImage(UIImage(named: "black"), for: .normal)
+//            }
+//            else{
+//                sender.setImage(UIImage(), for: .normal)
+//            }
+//        }
+//        else{
+//            sender.setImage(nil, for: .normal)
+//        }
         
     }
     
