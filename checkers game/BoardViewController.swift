@@ -72,20 +72,45 @@ class BoardViewController: UIViewController {
     @IBOutlet weak var square61: UIButton!
     @IBOutlet weak var square62: UIButton!
     @IBOutlet weak var square63: UIButton!
-    var justClicked: UIButton?
-    var timesClicked = 0
-    
+    var firstClick: UIButton?
+    var timesClicked = 1
+    var board = [[UIButton]]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        board = [[square0, square1, square2, square3, square4, square5, square6, square7],
+        [square8, square9, square10, square11, square12, square13, square14, square15],
+        [square16, square17, square18, square19, square20, square21, square22, square23],
+        [square24, square25, square26, square27, square28, square29, square30, square31],
+        [square32, square33, square34, square35, square36, square37, square38, square39],
+        [square40, square41, square42, square43, square44, square45, square46, square47],
+        [square48, square49, square50, square51, square52, square53, square54, square55],
+        [square56, square57, square58, square59, square60, square61, square62, square63]]
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func changeImage(_ sender: UIButton) {
+    @IBAction func changeImage(_ secondClick: UIButton) {
+        print(getRowAndCol(of: secondClick)![1])
         timesClicked = timesClicked + 1
-        justClicked = sender
-        if sender.tag == 1{
-            
+        if timesClicked%2 == 0{
+            firstClick = secondClick
         }
+        else{
+            if firstClick!.tag == 1 && secondClick.tag == 2{
+                firstClick?.tag = 2
+                secondClick.tag = 1
+                firstClick?.setImage(nil, for: .normal)
+                secondClick.setImage(UIImage(named: "red"), for: .normal)
+                
+            }
+            else if firstClick!.tag == 0 && secondClick.tag == 2{
+                firstClick?.tag = 2
+                secondClick.tag = 0
+                firstClick?.setImage(nil, for: .normal)
+                secondClick.setImage(UIImage(named: "black"), for: .normal)
+            }
+        }
+        
+        
 //        if sender.currentImage == nil{
 //            if sender.tag == 1 {
 //                sender.setImage(UIImage(named: "red"), for: .normal)
@@ -102,6 +127,17 @@ class BoardViewController: UIViewController {
 //        }
         
     }
+    func getRowAndCol(of piece: UIButton) -> [Int]? {
+            for (row, i) in board.enumerated () {
+                for (col, j) in i.enumerated() {
+                  if j == piece {
+                      return [row, col];
+                  }
+              }
+            }
+            return nil
+        }
+
     
 
     /*
