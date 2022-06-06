@@ -89,13 +89,15 @@ class BoardViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func changeImage(_ secondClick: UIButton) {
-        print(getRowAndCol(of: secondClick)![1])
+        print(getRowAndCol(of: secondClick)!)
+        
         timesClicked = timesClicked + 1
         if timesClicked%2 == 0{
             firstClick = secondClick
         }
         else{
             if firstClick!.tag == 1 && secondClick.tag == 2{
+                
                 firstClick?.tag = 2
                 secondClick.tag = 1
                 firstClick?.setImage(nil, for: .normal)
@@ -109,6 +111,7 @@ class BoardViewController: UIViewController {
                 secondClick.setImage(UIImage(named: "black"), for: .normal)
             }
         }
+    
         
         
 //        if sender.currentImage == nil{
@@ -137,6 +140,12 @@ class BoardViewController: UIViewController {
             }
             return nil
         }
+    
+    func isValidMove(from: UIButton, to: UIButton)-> Bool{
+        var fromPlacment = getRowAndCol(of: from)
+        var toPlacment = getRowAndCol(of: to)
+        if toPlacment[0] == fromPlacment[0] + 1 && fromPlacment[1] - 1{
+    }
 
     
 
