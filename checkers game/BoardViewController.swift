@@ -74,6 +74,7 @@ class BoardViewController: UIViewController {
     @IBOutlet weak var square63: UIButton!
     var firstClick: UIButton?
     var timesClicked = 1
+    var redsTurn = true
     var board = [[UIButton]]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,18 +98,21 @@ class BoardViewController: UIViewController {
         }
         else{
             if firstClick!.tag == 1 && secondClick.tag == 2{
-                
-                firstClick?.tag = 2
-                secondClick.tag = 1
-                firstClick?.setImage(nil, for: .normal)
-                secondClick.setImage(UIImage(named: "red"), for: .normal)
+                if isValidMove(from: firstClick!, to: secondClick){
+                    firstClick?.tag = 2
+                    secondClick.tag = 1
+                    firstClick?.setImage(nil, for: .normal)
+                    secondClick.setImage(UIImage(named: "red"), for: .normal)
+                }
                 
             }
             else if firstClick!.tag == 0 && secondClick.tag == 2{
-                firstClick?.tag = 2
-                secondClick.tag = 0
-                firstClick?.setImage(nil, for: .normal)
-                secondClick.setImage(UIImage(named: "black"), for: .normal)
+                if isValidMove(from: firstClick!, to: secondClick){
+                    firstClick?.tag = 2
+                    secondClick.tag = 0
+                    firstClick?.setImage(nil, for: .normal)
+                    secondClick.setImage(UIImage(named: "black"), for: .normal)
+                }
             }
         }
     
@@ -142,9 +146,31 @@ class BoardViewController: UIViewController {
         }
     
     func isValidMove(from: UIButton, to: UIButton)-> Bool{
-        var fromPlacment = getRowAndCol(of: from)
-        var toPlacment = getRowAndCol(of: to)
-        if toPlacment[0] == fromPlacment[0] + 1 && fromPlacment[1] - 1{
+        let fromPlacement = getRowAndCol(of: from)!
+        let toPlacement = getRowAndCol(of: to)!
+        
+        if from.tag == 1 {
+            if toPlacement[0] == fromPlacement[0] + 1 && (toPlacement[1] == fromPlacement[1] - 1 || toPlacement[1] == fromPlacement[1] + 1) {
+            return true
+            }else{
+                return false
+            }
+        }
+        else if from.tag == 0 {
+            if toPlacement[0] == fromPlacement[0] - 1 && (toPlacement[1] == fromPlacement[1] - 1 || toPlacement[1] == fromPlacement[1] + 1){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+        else{
+            return false
+        }
+    }
+    func canJump(from: UIButton, to: UIButton)-> Bool{
+        let fromPlacement = getRowAndCol(of: from)!
+        let toPlacement = getRowAndCol(of: to)!
     }
 
     
