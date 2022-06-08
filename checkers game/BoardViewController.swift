@@ -168,9 +168,38 @@ class BoardViewController: UIViewController {
             return false
         }
     }
-    func canJump(from: UIButton, to: UIButton)-> Bool{
+    func canJump(from: UIButton, to: UIButton){
         let fromPlacement = getRowAndCol(of: from)!
         let toPlacement = getRowAndCol(of: to)!
+        if from.tag == 1{
+            if toPlacement[1] == fromPlacement[1] - 2 && to.tag == 2{
+                var leftMiddleChecker = board[fromPlacement [0] - 1][fromPlacement[1] + 1]
+                if leftMiddleChecker.tag == 0{
+                    
+                    
+                }
+            }
+            else if toPlacement[1] == fromPlacement[1] + 2 && to.tag == 2{
+                var rightMiddleChecker = board[fromPlacement [0] - 1][fromPlacement[1] - 1]
+                if rightMiddleChecker.tag == 0{
+                    //TODO - wright code for black to jump right
+                }
+            }
+        }
+        else if from.tag == 0{
+            if toPlacement[1] == fromPlacement[1] + 2 && to.tag == 2{
+                var leftMiddleChecker = board[fromPlacement [0] + 1][fromPlacement[1] - 1]
+                if leftMiddleChecker.tag == 1{
+                    //TODO - wright code for black to jump left
+                    
+                }
+            }
+            else if toPlacement[1] == fromPlacement[1] - 2 && to.tag == 2{
+                var rightMiddleChecker = board[fromPlacement [0] + 1][fromPlacement[1] + 1]
+                if rightMiddleChecker.tag == 1{
+                    //TODO - wright code for black to jump right
+                }
+        }
     }
 
     
