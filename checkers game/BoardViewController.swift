@@ -97,6 +97,7 @@ class BoardViewController: UIViewController {
             firstClick = secondClick
         }
         else{
+            canJump(from: firstClick!, to: secondClick)
             if firstClick!.tag == 1 && secondClick.tag == 2{
                 if isValidMove(from: firstClick!, to: secondClick){
                     firstClick?.tag = 2
@@ -168,36 +169,55 @@ class BoardViewController: UIViewController {
             return false
         }
     }
+    //red = 1 black = 0
     func canJump(from: UIButton, to: UIButton){
         let fromPlacement = getRowAndCol(of: from)!
         let toPlacement = getRowAndCol(of: to)!
-        if from.tag == 1{
+        if from.tag == 0{
             if toPlacement[1] == fromPlacement[1] - 2 && to.tag == 2{
-                var leftMiddleChecker = board[fromPlacement [0] - 1][fromPlacement[1] + 1]
-                if leftMiddleChecker.tag == 0{
-                    
-                    
+                var leftMiddleChecker = board[fromPlacement [0] - 1][fromPlacement[1] - 1]
+                if leftMiddleChecker.tag == 1{
+                    from.tag = 2
+                    from.setImage(nil, for: .normal)
+                    leftMiddleChecker.setImage(nil, for: .normal)
+                    leftMiddleChecker.tag = 2
+                    to.tag = 0
+                    to.setImage(UIImage(named: "black"), for: .normal)
                 }
             }
             else if toPlacement[1] == fromPlacement[1] + 2 && to.tag == 2{
-                var rightMiddleChecker = board[fromPlacement [0] - 1][fromPlacement[1] - 1]
-                if rightMiddleChecker.tag == 0{
-                    //TODO - wright code for black to jump right
+                var rightMiddleChecker = board[fromPlacement [0] - 1][fromPlacement[1] + 1]
+                if rightMiddleChecker.tag == 1{
+                    from.tag = 2
+                    from.setImage(nil, for: .normal)
+                    rightMiddleChecker.setImage(nil, for: .normal)
+                    rightMiddleChecker.tag = 2
+                    to.tag = 0
+                    to.setImage(UIImage(named: "black"), for: .normal)
                 }
             }
         }
-        else if from.tag == 0{
+        else if from.tag == 1{
             if toPlacement[1] == fromPlacement[1] + 2 && to.tag == 2{
-                var leftMiddleChecker = board[fromPlacement [0] + 1][fromPlacement[1] - 1]
-                if leftMiddleChecker.tag == 1{
-                    //TODO - wright code for black to jump left
-                    
+                var rightMiddleChecker = board[fromPlacement [0] + 1][fromPlacement[1] + 1]
+                if rightMiddleChecker.tag == 0{
+                    from.tag = 2
+                    from.setImage(nil, for: .normal)
+                    rightMiddleChecker.setImage(nil, for: .normal)
+                    rightMiddleChecker.tag = 2
+                    to.tag = 1
+                    to.setImage(UIImage(named: "red"), for: .normal)
                 }
             }
             else if toPlacement[1] == fromPlacement[1] - 2 && to.tag == 2{
-                var rightMiddleChecker = board[fromPlacement [0] + 1][fromPlacement[1] + 1]
-                if rightMiddleChecker.tag == 1{
-                    //TODO - wright code for black to jump right
+                var leftMiddleChecker = board[fromPlacement [0] + 1][fromPlacement[1] - 1]
+                if leftMiddleChecker.tag == 0{
+                    from.tag = 2
+                    from.setImage(nil, for: .normal)
+                    leftMiddleChecker.setImage(nil, for: .normal)
+                    leftMiddleChecker.tag = 2
+                    to.tag = 1
+                    to.setImage(UIImage(named: "red"), for: .normal)
                 }
         }
     }
@@ -214,4 +234,5 @@ class BoardViewController: UIViewController {
     }
     */
 
+    }
 }
